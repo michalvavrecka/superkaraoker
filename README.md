@@ -3,7 +3,7 @@
 [![Generic badge](https://img.shields.io/badge/Language-Python-green.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://shields.io/)
 
-# Superkaraoker
+# Superkaraoker 0.0.1
 
 Automatic karaoke generator based on recent neural nets. Converts any youtube link to music video with extracted vocals while hardcode big subtitles. It works in any language (autodetection).
 
@@ -21,6 +21,8 @@ Automatic karaoke generator based on recent neural nets. Converts any youtube li
 `pip install -r requierements.txt`
 
 `sudo apt install ffmpeg`
+
+`mkdir karaoke & mkdir output & mkdir original`
 
 You can check original and karaoke folders for the example with non-copyright music.
 
