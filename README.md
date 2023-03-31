@@ -24,8 +24,6 @@ Automatic karaoke generator based on recent neural nets. Converts any youtube li
 
 `mkdir karaoke & mkdir output & mkdir original`
 
-You can check original and karaoke folders for the example with non-copyright music.
-
 
 ## Requirements
 
