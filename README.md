@@ -75,6 +75,6 @@ Better subtitles timing with whisperx (work only for specific languages)
 
 ##License
 
-Copyright © 2023 Michal Vavrecka.  Released under the MIT License.  
+Copyright © 2023 [Michal Vavrecka](https://kognice.wixsite.com/vavrecka).  Released under the MIT License.  
 
 
