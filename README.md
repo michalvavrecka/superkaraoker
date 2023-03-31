@@ -11,11 +11,18 @@ Automatic karaoke generator based on recent neural nets. Converts any youtube li
 ## Installation
 
 `git clone https://github.com/michalvavrecka/superkaraoker.git`
+
 `cd superkaraoker`
-'sudo chmod +ax ./superkaraoker'
-'sudo chmod +ax ./multikaraoker'
+
+`sudo chmod +ax ./superkaraoker`
+
+`sudo chmod +ax ./multikaraoker`
+
 `pip install -r requierements.txt`
-'sudo apt install ffmpeg'
+
+`sudo apt install ffmpeg`
+
+You can check original and karaoke folders for the example with non-copyright music.
 
 
 ## Requirements
@@ -28,11 +35,14 @@ Whisper and Whisperx requires at least 2GB VRAM for smallest model, 6GB VRAM for
 
 Convert one song
 
-'./superkaraoker https://youtu.be/fUkBPG6viPI Mindslip_Broken_picture_frames'
+
+`./superkaraoker https://youtu.be/fUkBPG6viPI Mindslip_Broken_picture_frames`
+
 
 Convert multiple songs
 
-'./multikaraoker mysongs.txt'
+
+`./multikaraoker mysongs.txt`
 
 
 ##Output
