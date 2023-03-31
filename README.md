@@ -5,7 +5,7 @@
 
 # Superkaraoker 0.0.1
 
-Automatic karaoke generator based on recent neural nets. Converts any youtube link to music video with extracted vocals while hardcode big subtitles. It works in any language (autodetection).
+Automatic karaoke generator based on recent neural nets. Converts any youtube link to music video with extracted vocals while hardcode big subtitles. Multilingual vocal autodetection.
 
 
 ## Installation
@@ -52,6 +52,7 @@ Convert multiple songs
 ## Example
 
 Karaoke (copyright free music video) 
+
 
 https://user-images.githubusercontent.com/16919032/229085294-edb4509e-deeb-4b0b-b43b-e22c81c7268a.mp4
 
