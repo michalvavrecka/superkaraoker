@@ -55,7 +55,7 @@ Karaoke (copyright free music video)
 
 
 https://user-images.githubusercontent.com/16919032/229085294-edb4509e-deeb-4b0b-b43b-e22c81c7268a.mp4
-
+.
 
 
 Original video with hardcoded subtitles (copyright free music video) 
