@@ -18,7 +18,7 @@ Automatic karaoke generator based on recent neural nets. Converts any youtube li
 
 `sudo chmod +ax ./multikaraoker`
 
-`pip install -r requierements.txt`
+`pip install -r requirements.txt`
 
 `sudo apt install ffmpeg`
 
