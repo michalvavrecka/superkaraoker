@@ -4,19 +4,24 @@ echo "$1"
 yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" $1 -o $2.mp4
 echo "Extracting audio from video"
 echo "$2"
-< /dev/null ffmpeg -i "$2.mp4" -c:a libmp3lame -qscale:a 1 $2.mp3
+< /dev/null ffmpeg -hide_banner -loglevel error -i "$2.mp4" -c:a libmp3lame -qscale:a 1 $2.mp3
 echo "Extracting voice from audio"
 echo "$2"
 < /dev/null spleeter separate -p spleeter:2stems -o output $2.mp3
 cp ./$2.mp4 ./output/$2
 cd ./output/$2
-whisper ./vocals.wav --language Czech --model large
-< /dev/null ffmpeg -i "$2.mp4" -i accompaniment.wav -i "vocals.vtt" -map 0:v -map 1:a -map 2 -metadata:s:s:0 language=cs -c:v copy -c:a aac -c:s mov_text $2-srt.mp4
-< /dev/null ffmpeg -i $2-srt.mp4 -vf "subtitles=vocals.srt:force_style='Fontsize=34,Outline=3'" $2-karaoker.mp4
-< /dev/null ffmpeg -i $2.mp4 -vf "subtitles=vocals.srt:force_style='Fontsize=34,Outline=3'" $2-original.mp4
+whisper ./vocals.wav --model large
+echo "Creating soft subtitles to video"
+< /dev/null ffmpeg -hide_banner -loglevel error -i "$2.mp4" -i accompaniment.wav -i "vocals.vtt" -map 0:v -map 1:a -map 2 -metadata:s:s:0 language=cs -c:v copy -c:a aac -c:s mov_text $2-srt.mp4
+echo "Creating karaoke video"
+< /dev/null ffmpeg -hide_banner -loglevel error -i $2-srt.mp4 -vf "subtitles=vocals.srt:force_style='Fontsize=34,Outline=3'" $2-karaoker.mp4
+echo "Creating original video with hardcoced subtitles"
+< /dev/null ffmpeg -hide_banner -loglevel error -i $2.mp4 -vf "subtitles=vocals.srt:force_style='Fontsize=34,Outline=3'" $2-original.mp4
+echo "Cleaning up the mess"
 cp ./$2-karaoker.mp4 ../../karaoke/$2-karaoker.mp4
 cp ./$2-original.mp4 ../../original/$2-original.mp4
 cd ../..
 rm $2.mp4
 rm $2.mp3
 rm -rf output/$2
+echo "Karaoke successfuly created"
