@@ -10,6 +10,9 @@ Automatic karaoke generator based on recent neural nets. Converts any youtube li
 
 ## Installation
 
+
+Linux:
+
 `git clone https://github.com/michalvavrecka/superkaraoker.git`
 
 `cd superkaraoker`
@@ -23,6 +26,20 @@ Automatic karaoke generator based on recent neural nets. Converts any youtube li
 `sudo apt install ffmpeg`
 
 `mkdir karaoke & mkdir output & mkdir original`
+
+
+Windows: 
+
+Install Python from store, download and install FFmpeg then:
+
+`git clone https://github.com/michalvavrecka/superkaraoker.git`
+
+`cd superkaraoker`
+
+`pip install -r requirements.txt`
+
+Then you can try superkaraoker.bat
+
 
 
 ## Requirements
