@@ -10,25 +10,41 @@ Automatic karaoke generator based on recent neural nets. Converts any youtube li
 
 ## Installation
 
+### Linux
 
-Linux:
+Clone the repository and make output directories:
+```
+git clone https://github.com/michalvavrecka/superkaraoker.git
+cd superkaraoker
+mkdir karaoke & mkdir output & mkdir original
+```
 
-`git clone https://github.com/michalvavrecka/superkaraoker.git`
+Install dependencies and make shell scripts executable:
+```
+pip install -r requirements.txt
+sudo apt install ffmpeg
+sudo chmod +ax ./superkaraoker
+sudo chmod +ax ./multikaraoker
+```
 
-`cd superkaraoker`
+### Mac
 
-`sudo chmod +ax ./superkaraoker`
+Clone the repository and make output directories:
+```
+git clone https://github.com/michalvavrecka/superkaraoker.git
+cd superkaraoker
+mkdir karaoke & mkdir output & mkdir original
+```
 
-`sudo chmod +ax ./multikaraoker`
+Install dependencies and make shell scripts executable:
+```
+pip install -r requirements.txt
+brew install ffmpeg
+chmod 755 ./superkaraoker
+chmod 755 ./multikaraoker
+```
 
-`pip install -r requirements.txt`
-
-`sudo apt install ffmpeg`
-
-`mkdir karaoke & mkdir output & mkdir original`
-
-
-Windows: 
+### Windows
 
 Install Python from store, download and install FFmpeg then:
 
